@@ -4,8 +4,9 @@
 }
 
 html {
-  background-color: orange;
   font-family: "Oswald", sans-serif;
+  background-color: orange;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -58,14 +59,15 @@ html {
 }
 
 .sideImg3 {
-    background-image: url("https://i.postimg.cc/XN83GcPv/max-andrey-g-Hs8g-Vzbw-FM-unsplash.jpg");
-    background-position: center;
-    grid-area: side3;
-    display: none;
+  background-image: url("https://i.postimg.cc/XN83GcPv/max-andrey-g-Hs8g-Vzbw-FM-unsplash.jpg");
+  background-position: center;
+  grid-area: side3;
+  display: none;
 }
 
-.title, .title2 {
-    font-size: 43px;
+.title,
+.title2 {
+  font-size: 43px;
 }
 
 .title {
@@ -74,22 +76,29 @@ html {
 }
 
 .title2 {
-    margin: -45px;
-    margin-left: 45px;
-    color: #5b0834;
+  margin: -45px;
+  margin-left: 45px;
+  color: #5b0834;
 }
 
 .title3 {
-    font-size: 35px;
-    margin: 45px;
-    margin-left: 45px;
-    color: #5b0834;
+  font-size: 35px;
+  margin: 45px;
+  margin-left: 45px;
+  color: #5b0834;
 }
 
 .item {
   padding-top: 15px;
   padding-left: 15px;
   font-size: 35px;
+}
+
+.item1,
+.price1 {
+  font-size: 40px;
+  text-align: right;
+  padding-right: 45px;
 }
 
 .price {
@@ -100,7 +109,7 @@ html {
 
 /* Navbar */
 .navbar {
-  display: grid;
+  /* display: grid; */
   order: -1;
 }
 
@@ -110,11 +119,11 @@ html {
 
 .logo {
   color: olivedrab;
-  line-height: 70px;
+  line-height: 65px;
 }
 
 ul {
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   background-color: black;
   justify-items: center;
   display: grid;
@@ -138,176 +147,279 @@ a:hover {
 }
 /* / Navbar */
 
+/* About */
+.aboutHoodie {
+  text-align: center;
+}
+
+.titleAbout {
+  padding: 35px 0px;
+}
+
+.fabricImg {
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+    "imgF1 imgF2 imgF3"
+    "imgF4 imgF5 imgF6"
+    "imgF7 imgF8 imgF9";
+  grid-template: repeat(auto-fit, minmax(200px, 1fr)), repeat(auto-fit, minmax(10px, 1fr));
+  gap: 15px;
+}
+
+.imgF {
+  text-align: center;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.fabricImg p {
+  width: 350px;
+  padding: 15px;
+}
+
+.imgF1 {
+  grid-area: imgF1;
+}
+
+.imgF2 {
+  grid-area: imgF2;
+}
+
+.imgF3 {
+  grid-area: imgF3;
+}
+
+.imgF4 {
+  grid-area: imgF4;
+}
+
+.imgF5 {
+  grid-area: imgF5;
+}
+
+.imgF6 {
+  grid-area: imgF6;
+}
+
+.imgF7 {
+  grid-area: imgF7;
+}
+
+.imgF8 {
+  grid-area: imgF8;
+}
+
+.imgF9 {
+  grid-area: imgF9;
+}
+/* / About */
+
 /* Responsive */
 /* Desktop */
-@media (max-width: 1200px) {
-    body {
-        width: 100%;
-        background-repeat: no-repeat;
-    }
+@media (min-width: 1024px) {
 
-    .header {
-        grid-template-areas:
-        "hero hero hero"
-        "hero hero hero"
-        "hero hero hero"
-        "side1 side1 side1"
-        "side1 side1 side1"
-        "side2 side2 side2"
-        "side2 side2 side2";
-        grid-template-rows: repeat(7, 250px);
-    }
-
-    .hero {
-        width: auto;
-        height: auto;
-    }
-
-    .title, .title2 {
-        font-size: 60px;
-    }
-
-    .title {
-        margin: 25px;
-    }
-
-    .title2 {
-        margin: -25px;
-        margin-left: 25px;
-    }
-
-    .title3 {
-        font-size: 45px;
-        margin: 25px;
-        margin-left: 25px;
-    }
-
-    .sideImg1 .item, .sideImg1 .price {
-        text-align: right;
-    }
-
-    .sideImg1, .sideImg2 {
-        background-repeat: no-repeat;
-    }
-
-    .item {
-        font-size: 65px;
-        padding-right: 100px;
-    }
-
-    .price {
-        font-size: 55px;
-        padding-right: 100px;
-    }
-
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        background-color: black;
-        justify-content: center;
-        flex-wrap: wrap;
-        order: none;
-    }
-
-    .nav {
-        display: grid;
-        grid-template-areas:
-        "logo home about products contact";
-        grid-template-rows: repeat(5, 25px);
-        margin-bottom: -45px;
-    }
-
-    .logo {
-        grid-area: logo;
-        padding-right: 45px;
-        /* padding-left: -45px; */
-    }
-
-    .home {
-        grid-area: home;
-    }
-
-    .about {
-        grid-area: about;
-    }
-
-    .products {
-        grid-area: products;
-    }
-
-    .contact {
-        grid-area: contact;
-    }
-
-    /* ul {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        background-color: black;
-        justify-items: center;
-        display: grid;
-    } */
 }
 /* / Desktop */
 
 /* Tablet */
-@media (max-width: 768px) {
-    
+@media (max-width: 1024px) {
+  body {
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .header {
+    grid-template-areas:
+      "hero hero hero"
+      "hero hero hero"
+      "hero hero hero"
+      "side1 side1 side1"
+      "side1 side1 side1"
+      "side2 side2 side2"
+      "side2 side2 side2";
+    grid-template-rows: repeat(7, 250px);
+  }
+
+  .hero {
+    width: auto;
+    height: auto;
+  }
+
+  .title,
+  .title2 {
+    font-size: 58px;
+  }
+
+  .title {
+    margin: 25px;
+  }
+
+  .title2 {
+    margin: -25px;
+    margin-left: 25px;
+  }
+
+  .title3 {
+    font-size: 45px;
+    margin: 25px;
+    margin-left: 25px;
+  }
+
+  .sideImg1 .item,
+  .sideImg1 .price {
+    text-align: right;
+  }
+
+  .item {
+    font-size: 65px;
+    padding-right: 100px;
+  }
+
+  .price {
+    font-size: 55px;
+    padding-right: 100px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: center;
+    flex-wrap: wrap;
+    order: none;
+  }
+
+  .nav {
+    display: grid; 
+    grid-template-areas: "logo home about products contact";
+    grid-template-rows: repeat(5, 25px);
+    margin-bottom: -45px;
+  }
+
+  .logo {
+    grid-area: logo;
+    padding-right: 20px;
+    /* padding-left: -45px; */
+  }
+
+  ul {
+    padding-top: 10px;
+  }
+
+  .home {
+    grid-area: home;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .products {
+    grid-area: products;
+  }
+
+  .contact {
+    grid-area: contact;
+  }
 }
 /* Tablet */
 
 /* Mobile */
 @media (max-width: 480px) {
-    body {
-        width: 100%;
-        background-repeat: no-repeat;
-    }
+  body {
+    width: 100%;
+    background-repeat: no-repeat;
+  }
 
-    .header {
-        grid-template-areas:
-        "hero hero hero"
-        "hero hero hero"
-        "side1 side1 side1"
-        "side2 side2 side2";
-        grid-template-rows: repeat(4, 250px);
-    }
+  .header {
+    grid-template-areas:
+      "hero hero hero"
+      "hero hero hero"
+      "side1 side1 side1"
+      "side2 side2 side2";
+    grid-template-rows: repeat(4, 250px);
+    grid-template-columns: repeat(auto-fit, 150px);
+  }
 
-    .hero {
-        width: auto;
-        height: auto;
-    }
+  .hero {
+    width: auto;
+    height: auto;
+  }
 
-    .title, .title2 {
-        font-size: 33px;
-    }
+  .title,
+  .title2 {
+    font-size: 33px;
+  }
 
-    .title {
-        margin: 25px;
-    }
+  .title {
+    margin: 25px;
+  }
 
-    .title2 {
-        margin: -25px;
-        margin-left: 25px;
-    }
-    .sideImg1 .item, .sideImg1 .price {
-        text-align: right;
-        padding-right: 30px;
-    }
+  .title2 {
+    margin: -25px;
+    margin-left: 25px;
+  }
 
-    .price {
-        font-size: 35px;
-    }
+  .title3 {
+    display: none;
+  }
 
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        background-color: black;
-        justify-content: center;
-        flex-wrap: wrap;
-        order: none;
-    }
+  .sideImg1 .item,
+  .sideImg1 .price {
+    text-align: right;
+    padding-right: 30px;
+  }
 
-    .logo {
-        display: none;
-    }
+  .item1,
+  .price1 {
+    color: orange;
+  }
+
+  .item {
+    font-size: 39px;
+  }
+
+  .price {
+    font-size: 33px;
+  }
+
+  .navbar {
+    background-color: black;
+    flex-direction: row;
+    display: flex;
+    order: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .home {
+    display: none;
+  }
+
+  /* About */
+  .fabricImg {
+    justify-items: center;
+    grid-template-areas:
+    "imgF1"
+    "imgF2"
+    "imgF3"
+    "imgF4"
+    "imgF5"
+    "imgF6"
+    "imgF7"
+    "imgF8"
+    "imgF9";
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .imgF9 {
+    display: none;
+  }
+  /* / About */
 }
 /* / Mobile */
 /* / Responsive */
