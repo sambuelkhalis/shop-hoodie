@@ -103,7 +103,7 @@ html {
 
 .price {
   padding-left: 15px;
-  font-size: 30px;
+  font-size: 38px;
 }
 /* / Header */
 
@@ -164,13 +164,19 @@ a:hover {
     "imgF4 imgF5 imgF6"
     "imgF7 imgF8 imgF9";
   grid-template: repeat(auto-fit, minmax(200px, 1fr)), repeat(auto-fit, minmax(10px, 1fr));
-  gap: 15px;
+  gap: 25px;
 }
 
 .imgF {
-  text-align: center;
+  background-color: lightslategray;
   border: 2px solid black;
   box-sizing: border-box;
+  text-align: center;
+}
+
+.imgF img {
+  width: 400px;
+  height: 285px;
 }
 
 .fabricImg p {
@@ -322,6 +328,22 @@ a:hover {
   .contact {
     grid-area: contact;
   }
+
+  /* About */
+  .fabricImg {
+    grid-template-areas:
+    "imgF1 imgF2"
+    "imgF3 imgF4"
+    "imgF5 imgF6"
+    "imgF7 imgF8"
+    "imgF9 imgF9";
+    gap: 15px;
+  }
+
+  .none {
+    display: none;
+  }
+  /* / About */
 }
 /* Tablet */
 
@@ -414,10 +436,7 @@ a:hover {
     "imgF9";
     grid-template-rows: repeat(9, 1fr);
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .imgF9 {
-    display: none;
+    gap: 0;
   }
   /* / About */
 }
