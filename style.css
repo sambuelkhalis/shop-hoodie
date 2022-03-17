@@ -30,6 +30,10 @@ html {
   grid-template-columns: 3fr 3fr 5.2fr;
 }
 
+.titles {
+  font-size: 20px;
+}
+
 .hero {
   /* background-image: url("https://i.postimg.cc/63h29CWg/autri-taheri-3-G1-TJkt-MQJw-unsplash.jpg"); */
   background-image: url("https://i.postimg.cc/VkjftMpN/eniko-kis-Bv15r-Y8a-80-unsplash.jpg");
@@ -235,14 +239,14 @@ a:hover {
 .productsImg {
   display: grid;
   grid-template-areas:
-  "imgP imgP1"
-  "imgP imgP1"
-  "imgP2 imgP2"
-  "imgP3 imgP8"
-  "imgP4 imgP5"
-  "imgP4 imgP5"
-  "imgP6 imgP7"
-  "imgP6 imgP7";
+    "imgP imgP1"
+    "imgP imgP1"
+    "imgP2 imgP2"
+    "imgP3 imgP8"
+    "imgP4 imgP5"
+    "imgP4 imgP5"
+    "imgP6 imgP7"
+    "imgP6 imgP7";
   grid-template-rows: repeat(auto-fit, 2fr);
   grid-template-columns: repeat(auto-fit, 2fr);
   box-sizing: border-box;
@@ -356,6 +360,212 @@ a:hover {
 }
 /* / Products */
 
+/* Contact Us */
+.titleContact {
+  background-color: rgb(37, 160, 129);
+  text-align: center;
+  padding: 35px;
+  margin: 25px 0 0 0;
+}
+
+.contactUs {
+  display: grid;
+  grid-template-areas:
+    "Whatsapp Instagram Facebook"
+    "Twitter Email YouTube"
+    "Service Github Linkedin";
+  justify-content: center;
+  column-gap: 105px;
+  row-gap: 35px;
+  padding: 25px;
+  background-color: #075e54;
+  grid-template-columns: 250px 250px 250px;
+}
+
+.contactUs a {
+  font-family: "oswald";
+  line-height: 100px;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.contactUs {
+  text-shadow: 4px 4px 4px black;
+}
+
+.contactUs i:hover {
+  font-size: 55px;
+}
+
+.contactUs a:hover {
+  font-size: 45px;
+}
+
+.contactUs i.fa-whatsapp,
+.contactUs a.whatsapp, .socialMedia .fa-whatsapp {
+  color: #25d366;
+}
+
+.contactUs i.fa-instagram, .socialMedia .fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  -webkit-background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.contactUs a.instagram {
+  text-shadow: none;
+}
+
+.contactUs i.fa-facebook-official,
+.contactUs a.facebook, .socialMedia .fa-facebook-square {
+  color: #4267b2;
+}
+
+.contactUs i.fa-twitter,
+.contactUs a.twitter, .socialMedia .fa-twitter-square {
+  color: #1da1f2;
+}
+
+.contactUs i.fa-envelope,
+.contactUs a.email {
+  color: seashell;
+}
+
+.contactUs i.fa-youtube-play,
+.contactUs a.youtube, .socialMedia .fa-youtube-play {
+  color: #ff0000;
+}
+
+.contactUs i.fa-linkedin-square,
+.contactUs a.linkedin, .socialMedia .fa-linkedin-square {
+  color: #0e76a8;
+}
+
+.contactUs i.fa-github,
+.contactUs a.github {
+  color: #171515;
+}
+
+.contactUs i.fa-briefcase,
+.contactUs a.service {
+  color: rgb(218, 126, 126);
+}
+
+.contactWhatsapp {
+  grid-area: Whatsapp;
+}
+
+.contactInstagram {
+  grid-area: Instagram;
+}
+
+.contactFacebook {
+  grid-area: Facebook;
+}
+
+.contactTwitter {
+  grid-area: Twitter;
+}
+
+.contactEmail {
+  grid-area: Email;
+}
+
+.contactYoutube {
+  grid-area: YouTube;
+}
+
+.contactGithub {
+  grid-area: Github;
+}
+
+.contactLinkedin {
+  grid-area: Linkedin;
+}
+
+.contactService {
+  grid-area: Service;
+}
+/* / Contact Us */
+
+/* Footer */
+footer {
+  display: grid;
+  background-color: black;
+  padding: 55px;
+  color: white;
+  grid-template-areas:
+  "socialMedia paymentMethod shippingMethod"
+  "copyright copyright copyright";
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.socialMediaContainer {
+  grid-area: socialMedia;
+}
+
+.pins {
+  font-family: poppins;
+}
+
+.socialMedia {
+  justify-content: center;
+}
+
+.socialMedia .fa-github {
+  color: white;
+}
+
+.socialMedia .fa-whatsapp,
+.socialMedia .fa-instagram,
+.socialMedia .fa-facebook-square,
+.socialMedia .fa-twitter-square {
+  padding-right: 15px;
+}
+
+.socialMedia .fa-whatsapp,
+.socialMedia .fa-instagram,
+.socialMedia .fa-facebook-square,
+.socialMedia .fa-twitter-square,
+.socialMedia .fa-linkedin-square,
+.socialMedia .fa-github {
+  padding-top: 20px;
+}
+
+.paymentMethodContainer {
+  grid-area: paymentMethod;
+  font-family: poppins;
+}
+
+.paymentMethod img {
+  padding-right: 15px;
+  padding-top: 20px;
+  height: 35px;
+  width: 60px;
+}
+
+.shippingMethodContainer {
+  grid-area: shippingMethod;
+  font-family: poppins;
+}
+
+.shippingMethod img {
+  padding-right: 15px;
+  padding-top: 20px;
+  width: 60px;
+  height: 35px;
+}
+
+.copyright {
+  font-family: poppins;
+  grid-area: copyright;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+/* / Fotter */
 
 /* Responsive */
 /* Desktop */
@@ -430,7 +640,7 @@ a:hover {
     flex-wrap: wrap;
     order: none;
   }
-  
+
   .nav {
     display: grid;
     grid-template-areas: "logo home products about contact";
@@ -455,11 +665,11 @@ a:hover {
   .about {
     grid-area: about;
   }
-  
+
   .products {
     grid-area: products;
   }
-  
+
   .contact {
     grid-area: contact;
   }
@@ -467,8 +677,8 @@ a:hover {
   /* About */
   .fabricImg {
     grid-template-areas:
-    "imgF1 imgF2"
-    "imgF3 imgF4"
+      "imgF1 imgF2"
+      "imgF3 imgF4"
       "imgF5 imgF6"
       "imgF7 imgF8"
       "imgF9 imgF9";
@@ -484,12 +694,12 @@ a:hover {
   .productsImg {
     display: grid;
     grid-template-areas:
-    "imgP"
-    "imgP1"
-    "imgP4"
-    "imgP5"
-    "imgP6"
-    "imgP7";
+      "imgP"
+      "imgP1"
+      "imgP4"
+      "imgP5"
+      "imgP6"
+      "imgP7";
     grid-template-rows: repeat(auto-fit, 1fr);
     grid-template-columns: repeat(auto-fit, 1fr);
     align-content: center;
@@ -499,13 +709,14 @@ a:hover {
   .imgP1 {
     height: 550px;
   }
-  
-  .imgP2, .imgP3, .imgP8 {
+
+  .imgP2,
+  .imgP3,
+  .imgP8 {
     display: none;
   }
   /* / Products */
 }
-
 /* Tablet */
 
 /* Mobile */
@@ -569,8 +780,7 @@ a:hover {
   /* Navbar */
   .navbar {
     background-color: black;
-    grid-template-areas:
-    "products about contact";
+    grid-template-areas: "products about contact";
   }
 
   .logo {
@@ -585,6 +795,7 @@ a:hover {
   /* About */
   .titleProducts {
     padding: 105px 0;
+    font-size: 35px;
   }
 
   .fabricImg {
@@ -614,19 +825,20 @@ a:hover {
   .productsImg {
     display: grid;
     grid-template-areas:
-    "imgP"
-    "imgP1"
-    "imgP4"
-    "imgP5"
-    "imgP6"
-    "imgP7";
+      "imgP"
+      "imgP1"
+      "imgP4"
+      "imgP5"
+      "imgP6"
+      "imgP7";
     grid-template-rows: repeat(auto-fit, 1fr);
     grid-template-columns: repeat(auto-fit, 1px);
     justify-content: center;
     align-content: center;
   }
 
-  .titleP, .titleP4 {
+  .titleP,
+  .titleP4 {
     display: none;
   }
 
@@ -637,11 +849,14 @@ a:hover {
     margin-left: -250px;
   }
 
-  .imgP, .imgP1 {
+  .imgP,
+  .imgP1 {
     height: 550px;
   }
 
-  .img2, .img3, .img8 {
+  .img2,
+  .img3,
+  .img8 {
     display: none;
   }
   /* / Products */
