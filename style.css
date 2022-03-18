@@ -28,6 +28,7 @@ html {
     "hero hero side2";
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: 3fr 3fr 5.2fr;
+  padding-top: 70px;
 }
 
 .titles {
@@ -112,6 +113,11 @@ html {
 /* / Header */
 
 /* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+
 .nav {
   color: whitesmoke;
 }
@@ -149,6 +155,7 @@ a:hover {
 /* About */
 .aboutHoodie {
   text-align: center;
+  padding-top: 70px;
 }
 
 .titleAbout {
@@ -230,6 +237,10 @@ a:hover {
 /* / About */
 
 /* Products */
+.productsHoodie {
+  padding-top: 70px; 
+}
+
 .titleProducts {
   background-color: #19647e;
   text-align: center;
@@ -361,6 +372,10 @@ a:hover {
 /* / Products */
 
 /* Contact Us */
+.contactHoodie {
+  padding-top: 45px;
+}
+
 .titleContact {
   background-color: rgb(37, 160, 129);
   text-align: center;
@@ -419,7 +434,7 @@ a:hover {
   text-shadow: none;
 }
 
-.contactUs i.fa-facebook-official,
+.contactUs i.fa-facebook-square,
 .contactUs a.facebook, .socialMedia .fa-facebook-square {
   color: #4267b2;
 }
@@ -434,13 +449,13 @@ a:hover {
   color: seashell;
 }
 
-.contactUs i.fa-youtube-play,
-.contactUs a.youtube, .socialMedia .fa-youtube-play {
+.contactUs i.fa-youtube,
+.contactUs a.youtube, .socialMedia .fa-youtube {
   color: #ff0000;
 }
 
-.contactUs i.fa-linkedin-square,
-.contactUs a.linkedin, .socialMedia .fa-linkedin-square {
+.contactUs i.fa-linkedin,
+.contactUs a.linkedin, .socialMedia .fa-linkedin {
   color: #0e76a8;
 }
 
@@ -451,7 +466,7 @@ a:hover {
 
 .contactUs i.fa-briefcase,
 .contactUs a.service {
-  color: rgb(218, 126, 126);
+  color: rgb(230, 156, 95);
 }
 
 .contactWhatsapp {
