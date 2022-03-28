@@ -115,6 +115,7 @@ html {
 /* Navbar */
 .navbar {
   position: fixed;
+  z-index: 999;
   width: 100%;
 }
 
@@ -238,7 +239,7 @@ a:hover {
 
 /* Products */
 .productsHoodie {
-  padding-top: 70px; 
+  padding-top: 70px;
 }
 
 .titleProducts {
@@ -417,11 +418,13 @@ a:hover {
 }
 
 .contactUs i.fa-whatsapp,
-.contactUs a.whatsapp, .socialMedia .fa-whatsapp {
+.contactUs a.whatsapp,
+.socialMedia .fa-whatsapp {
   color: #25d366;
 }
 
-.contactUs i.fa-instagram, .socialMedia .fa-instagram {
+.contactUs i.fa-instagram,
+.socialMedia .fa-instagram {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
   -webkit-background-clip: text;
   /* Also define standard property for compatibility */
@@ -435,12 +438,14 @@ a:hover {
 }
 
 .contactUs i.fa-facebook-square,
-.contactUs a.facebook, .socialMedia .fa-facebook-square {
+.contactUs a.facebook,
+.socialMedia .fa-facebook-square {
   color: #4267b2;
 }
 
 .contactUs i.fa-twitter,
-.contactUs a.twitter, .socialMedia .fa-twitter-square {
+.contactUs a.twitter,
+.socialMedia .fa-twitter-square {
   color: #1da1f2;
 }
 
@@ -450,12 +455,14 @@ a:hover {
 }
 
 .contactUs i.fa-youtube,
-.contactUs a.youtube, .socialMedia .fa-youtube {
+.contactUs a.youtube,
+.socialMedia .fa-youtube {
   color: #ff0000;
 }
 
 .contactUs i.fa-linkedin,
-.contactUs a.linkedin, .socialMedia .fa-linkedin {
+.contactUs a.linkedin,
+.socialMedia .fa-linkedin {
   color: #0e76a8;
 }
 
@@ -513,8 +520,8 @@ footer {
   padding: 55px;
   color: white;
   grid-template-areas:
-  "socialMedia paymentMethod shippingMethod"
-  "copyright copyright copyright";
+    "socialMedia paymentMethod shippingMethod"
+    "copyright copyright copyright";
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -575,7 +582,7 @@ footer {
 }
 
 .copyright {
-  font-family: poppins;
+  font-family: "poppins";
   grid-area: copyright;
   text-align: center;
   padding: 10px 0 0 0;
@@ -583,12 +590,7 @@ footer {
 /* / Fotter */
 
 /* Responsive */
-/* Desktop */
-@media (min-width: 1024px) {
-}
-/* / Desktop */
-
-/* Tablet */
+/* Tablet Device */
 @media (max-width: 1024px) {
   body {
     width: 100%;
@@ -732,9 +734,9 @@ footer {
   }
   /* / Products */
 }
-/* Tablet */
+/* / Tablet Device */
 
-/* Mobile */
+/* Mobile Device */
 @media (max-width: 480px) {
   body {
     background-repeat: no-repeat;
@@ -796,6 +798,11 @@ footer {
   .navbar {
     background-color: black;
     grid-template-areas: "products about contact";
+    display: none;
+  }
+
+  .nav li {
+    padding-bottom: 0;
   }
 
   .logo {
@@ -809,7 +816,7 @@ footer {
 
   /* About */
   .titleProducts {
-    padding: 105px 0;
+    /* padding: 105px 0; */
     font-size: 35px;
   }
 
@@ -831,8 +838,9 @@ footer {
   }
 
   .titleAbout {
+    font-size: 18px;
     margin-bottom: 0;
-    padding: 105px 0;
+    /* padding: 105px 0; */
   }
   /* / About */
 
@@ -850,6 +858,10 @@ footer {
     grid-template-columns: repeat(auto-fit, 1px);
     justify-content: center;
     align-content: center;
+  }
+
+  .titleProducts {
+    font-size: 18px;
   }
 
   .titleP,
@@ -875,6 +887,56 @@ footer {
     display: none;
   }
   /* / Products */
+
+  /* Contact Us */
+  .contactHoodie {
+    padding-top: 0;
+    display: none;
+  }
+
+  .contactUs {
+    padding: 0;
+    row-gap: 0;
+    column-gap: 0;
+    grid-template-columns: 0;
+    grid-template-areas: none;
+  }
+  /* / Contact Us */
+
+  /* Footer */
+  footer {
+    grid-template-areas:
+    "socialMedia"
+    "paymentMethod"
+    "shippingMethod"
+    "copyright";
+    grid-template-columns: none;
+    width: 100%;
+  }
+  
+  /* Social Media */
+  .socialMedia {
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  /* / Social Media */
+
+  /* Payment Method */
+  .paymentMethod {
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 20px;
+  }
+  /* / Payment Method */
+
+  /* Shipping Method */
+  .shippingMethod {
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 20px;
+  }
+  /* / Shipping Method */
+  /* / Footer */
 }
-/* / Mobile */
+
+/* / Mobile Device */
 /* / Responsive */
